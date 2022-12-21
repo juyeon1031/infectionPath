@@ -119,9 +119,6 @@ char countryName[N_PLACE+1][MAX_PLACENAME] =
  	int n=0;
 	for(n=0;n<N_HISTORY;n++)
 		ptr->place[n] = place[n];
- 	
-	
- 	//여기에 free 넣으면 안됨.  
  	return ptr;
  }
 

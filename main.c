@@ -32,6 +32,7 @@ int main(int argc, const char * argv[]) {
     
     int i1;
     int i2;
+    int cnt;
 	 
     //------------- 1. loading patient info file ------------------------------
     //1-1. FILE pointer open
@@ -124,9 +125,25 @@ int main(int argc, const char * argv[]) {
             	scanf("%i", &i1);
             	printf("maximal age: ");
             	scanf("%i", &i2);
-            	
-            	//if()
-                printf("age: %i\n", ifctele_getAge(age));
+            	int x;
+            	x = ifctele_getAge(ifctdb_getData(index));
+            	for(index=0;index<5;index++)
+            		if(i1<=x && i2>=x){
+            			cnt++;
+            			printf("Patient index :"); //환자번호 출력
+						ifctele_printElement(index);
+				
+						printf("Patient age: "); //환자 나이 출력  
+						ifctele_printElement(ifctele_getAge(ifctdb_getData(index))); 
+				 
+						printf("Detected time: "); //감염 확인일자 출력  
+						ifctele_printElement(ifctele_getinfestedTime(ifctdb_getData(index)));
+				
+						printf("Path History: "); 
+						ifctele_printElement(ifctele_getHistPlaceIndex(ifctdb_getData(index), index);
+					}
+            			
+                
                 break;
                 
             case MENU_TRACK:
