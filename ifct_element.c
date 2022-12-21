@@ -128,7 +128,6 @@ int ifctele_getHistPlaceIndex(void* obj, int index)
   
  	return ptr->place[index];
  }
-//index는 몇번째 장소인지 지정해줘야하므로. 
 
 unsigned int ifctele_getinfestedTime(void* obj)
 {

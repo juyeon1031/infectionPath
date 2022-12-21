@@ -142,12 +142,14 @@ int main(int argc, const char * argv[]) {
 						printf("Path History: "); 
 						ifctele_printElement(ifctele_getHistPlaceIndex(ifctdb_getData(index), index);
 					}
-            			
+            	printf("There are %i patients before %i and %i.", cnt, i1, i2);	
                 
                 break;
                 
             case MENU_TRACK:
-                    
+            	printf("Patient index :");
+                scanf("%i", &index);   
+                
                 break;
                 
             default:
