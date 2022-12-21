@@ -29,6 +29,9 @@ int main(int argc, const char * argv[]) {
 	int age, time;
     int placeHist[N_HISTORY];
     int index;
+    
+    int i1;
+    int i2;
 	 
     //------------- 1. loading patient info file ------------------------------
     //1-1. FILE pointer open
@@ -100,19 +103,29 @@ int main(int argc, const char * argv[]) {
 				ifctele_printElement(ifctele_getinfestedTime(ifctdb_getData(index)));
 				
 				printf("Path History: "); 
-				
+				ifctele_printElement(ifctele_getHistPlaceIndex(ifctdb_getData(index), index);
+				//ifctele_printElement(ifctele_getPlaceName(ifctele_getHistPlaceIndex(ifctdb_getData(index), index))); 
+			
                 break;
                 
             case MENU_PLACE: //발병 확인이 된 환자 관련 정보 출력 
 				printf("input place :\n");
 				scanf("%s", &pIndex); //장소 입력 받고,
-				ifctele_getPlaceName(pIndex)
-				printf("");//발병 확인이 된 환자 모두의 정보 출력 
+	
+				ifctele_getPlaceName(pIndex);
+				//printf("");//발병 확인이 된 환자 모두의 정보 출력 
 				 
                 //printf("age: %i\n", ifctele_getAge(ifct_element));
-                break;
+                //break;
                 
             case MENU_AGE: 
+
+            	printf("minimal age: ");
+            	scanf("%i", &i1);
+            	printf("maximal age: ");
+            	scanf("%i", &i2);
+            	
+            	//if()
                 printf("age: %i\n", ifctele_getAge(age));
                 break;
                 
